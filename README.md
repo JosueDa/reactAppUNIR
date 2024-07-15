@@ -68,3 +68,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# reactAppUNIR
+This project is an online store management system built using React.js and Bootstrap, aimed at providing a seamless shopping experience for users. It includes features such as product browsing, cart management, customer information input, PDF generation for orders, and store location information.
