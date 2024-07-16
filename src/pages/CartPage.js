@@ -28,7 +28,7 @@ export default function CartPage() {
     }
   };
 
-  const subtotal = cartItems.reduce((acc, item) => acc + item.price, 0);
+  const subtotal = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
   const total = subtotal;
 
   return (
@@ -59,15 +59,16 @@ export default function CartPage() {
             <Row>
               {cartItems.map((item) => (
                 <Col md={6} lg={4} key={item.id} className="mb-3">
-                <Card style={{ width: '25rem', marginTop: '15px' }}>
+                  <Card style={{ width: '25rem', marginTop: '15px' }}>
                     <Card.Img
-                    variant="top"
-                    src={item.imageUrl}
-                    style={{ width: '100%', height: '15rem', objectFit: 'cover' }}
+                      variant="top"
+                      src={item.imageUrl}
+                      style={{ width: '100%', height: '15rem', objectFit: 'cover' }}
                     />
                     <Card.Body>
                       <Card.Title>{item.title}</Card.Title>
-                      <Card.Text>${item.price.toFixed(2)}</Card.Text>
+                      <Card.Text>${item.price.toFixed(2)} each</Card.Text>
+                      <Card.Text>Quantity: {item.quantity}</Card.Text>
                       <Button
                         variant="danger"
                         onClick={() => removeFromCart(item.id)}
