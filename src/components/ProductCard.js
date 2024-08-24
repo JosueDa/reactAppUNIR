@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 export default function ProductCard({ products }) {
   return (
     <div className="row" >
-      {products.map((product, index) => (
-        <Col key={index} >
+      {products.map((product) => (
+        <Col key={product.id} >
           <Card style={{ width: '25rem', marginTop: '15px' }}>
             <Card.Img
               variant="top"
@@ -17,7 +17,7 @@ export default function ProductCard({ products }) {
               <Card.Title>{product.title}</Card.Title>
               <Card.Text>{product.description}</Card.Text>
               <Card.Text variant="primary">${product.price}</Card.Text>
-              <Link to={`/product/${index}`} style={{ textDecoration: 'none' }}>
+              <Link to={`/product/${product.id}`} style={{ textDecoration: 'none' }}>
                 <Button variant="primary" style={{ marginTop: '10px' }}>Ver Detalles</Button>
               </Link>
             </Card.Body>
