@@ -15,7 +15,7 @@ export default function Home({ searchTerm }) {
 
         // If there is a search term, use the search endpoint
         if (searchTerm) {
-          url = `http://localhost:8080/searches/productsByQuery?query=${encodeURIComponent(searchTerm)}`;
+          url = `http://172.212.80.57:8080/searches/productsByQuery?query=${encodeURIComponent(searchTerm)}`;
         }
 
         const response = await fetch(url);
